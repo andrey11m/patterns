@@ -13,7 +13,7 @@ public class GameController {
 
     private final GameService gameService;
 
-    @GetMapping("/game/{state}")
+    @GetMapping("/state/{state}")
     public String game(@PathVariable String state) {
         gameService.run(state);
         return gameService.getConclusion();
